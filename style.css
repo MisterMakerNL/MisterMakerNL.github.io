@@ -91,66 +91,99 @@ hr  {
     margin-right: auto;
 }
 
+/* accordion */
 
-.collapsible h2 {
-    text-align: center;
-    color: #1f1f25;
-    font-size: 25px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background: linear-gradient(120deg, #008cff 20.69%, #7644ff 50.19%,#ff7300 79.69%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: -40px 0px;
-    padding-top: 40px;
-}
-
-
-.collapsible {
-    background-color: #383636;
-    border-radius: 0px 0px 0px 0px;
-    border-style: outset;
-    border-color: #4b4b4b;
-    border-width: 2px 2px 0px 2px;
-    cursor: pointer;
-    width: 100%;
-    color: #fff;
-    display: inline-block;
+/*
+ CSS for the main interaction
+*/
+.accordion > input[name="collapse"] {
+    display: none;
+    
+    /*position: absolute;
+    left: -100vw;*/
+  }
+  
+  .accordion label,
+  .accordion .content{
+   max-width: 100%;
+    margin: 0 auto;
    }
   
-  .active, .collapsible:hover {
-    background-color: #4b4b4b;
-  }
   
-
-  .collapsible:after {
-    content: '\002B';
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-    float:left;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  
-  .active:after {
-    content: "\2212";
-  }
-
-
-  .content {
-    background-color: #cacaca;
-    margin-bottom: 3px;
-    padding: 2px 25px;
-    border-style: outset;
-    border-radius: 0px 0px 20px 20px;
-    color: #000000;
-    border-color: #4b4b4b;
-    border-width: 0px 2px 2px 2px;
-    max-height: 0;
+  .accordion .content {
+    background: #fff;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    height: 0;
+    transition: 0.5s;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
   }
+  
+  .accordion > input[name="collapse"]:checked ~ .content {
+    height: 380px;
+    transition: height 0.5s;
+  }
+  
+  .accordion label {
+    display: block;
+   
+  }
+    
+  /* For Desktop */
+  @media only screen and (min-width: 620px){ 
+  .accordion > input[name="collapse"]:checked ~ .content {
+    height: 220px;
+  }
+  
+  }
+    
+  .accordion {
+    margin-bottom: 1em;
+  }
+  
+  .accordion > input[name="collapse"]:checked ~ .content {
+    border-top: 0;
+    transition: 0.3s;
+  }
+  
+  .accordion .handle {
+    margin: 0;
+    font-size: 16px;
+    
+  }
+  
+  .accordion label {
+    color: #fff;
+    cursor: pointer;
+    font-weight: normal;
+    padding: 10px;
+    background: #4d4d4d;
+    user-select: none;
+    
+  }
+  
+  .accordion label:hover,
+  .accordion label:focus {
+    background: #252525;
+  }
+  
+  .accordion .handle label:before {
+    content: "▼";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1em;
+    line-height: 1.556em;
+    vertical-align: middle;
+    transition: 0.4s;
+    
+  }
+  
+  .accordion > input[name="collapse"]:checked ~ .handle label:before {
+      transform: rotate(180deg);
+      transform-origin: center;
+      transition: 1s;
+  }
+  
+  
 /* Right column */
 .rightcolumn {
   float: left;

@@ -2,11 +2,12 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>MisterMaker Freelancer</title>
     <!----CSS link----->
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
@@ -21,74 +22,46 @@
 
 <div class="row">
   <div class="leftcolumn">
-    <h2>Animated Collapsibles</h2>  
-    <p>Collapsible Set:</p>
-    <button class="collapsible"><h2>Freelancer</h2></button>
-
-    <div class="content">
-        <p>Need some extra hands to help with your mechanical engineering projects? Or have a project that you can't do yourself? <br>
-            I am available to work from home or on location. My work area is around Tilburg, Eindhoven and 's Hertogenbosch see this  <a href="/img/werkgebied.png" target="_blank">map!</a> <br>
-        <br>My qualifications are:</p>
-        <ul>
-        <li>Mechanical engineering specialised in design and innovation. MBO+HBO WTB</li>
-        <li>International Welding Technologist(iwt)</li><br>
-        
-        <p> I do a lot of CAD work, done for customers and for multiple years as an employee. 
-            I recently became involved in to <a href="https://en.wikipedia.org/wiki/FreeCAD" target="_blank">FreeCAD</a> as this CAD program shows a lot of potential, 
-            and does not have the Vendor lock issues that other CAD software has. It enables me to suit the software to my needs. <br>
-        
-            I have worked with the following CAD programs:</p>
-            <ul>
-                <li>FreeCAD</li>
-                <li>Solidworks</li>
-                <li>Fusion360</li>
-                <li>Solid Edge</li>
-                <li>Autocad</li>
-                <li>Inventor</li>
-                <li>Catia V5</li>
-                <li>Pro/e</li>
-            </ul><br>
-            <p> Projects I worked on:
-        <ul>
-            <li>Industrial Pumps</li>
-            <li>Scissor lift</li>
-            <li>Office automation</li>
-            <li>Furniture (also self made)</li>
-        
-        </ul>
-        </p>
-    </div>
+           
+    <h2> Collapsible Text using Checkbox Input    </h2>
     
-    <button class="collapsible"><h2>Open Section 2</h2></button>
-    <div class="content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <button class="collapsible"><h2>Open Section 3</h2></button>
-    <div class="content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="headpost"><h1>Freelance</h1></div>
-    <div class="post">
-     
-    </div>
-    <div class="headpost"><h1>Design</h1></div>
-    <div class="post">
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      <div class="img"><img src="./img/logo.gif" class="cardimg"></div>
-    </div>
-    <div class="headpost"><h1>Visualization</h1></div>
-    <div class="post">
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      <div class="img"><img src="./img/logo.gif" class="cardimg"></div>
-    </div>
-    <div class="headpost"><h1>Prototyping</h1></div>
-    <div class="post">
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      <div class="img"><img src="./img/logo.gif" class="cardimg"></div>
-    </div>
+    <p> The following example shows HTML collapsible text using input type checkbox. These are toggle able. </p>
+    
+    
+    <section class="accordion">
+      <input type="checkbox" name="collapse" id="handle4" checked="checked">
+      <h2 class="handle">
+        <label for="handle4">It'll not close when open other</label>
+      </h2>
+      <div class="content">
+        <p><strong>Lorem ipsum dolor:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+      </div>
+    </section>
+
+    <section class="accordion">
+      <input type="checkbox" name="collapse" id="handle5">
+      <h2 class="handle">
+        <label for="handle5">Another Collapsible Text Heading</label>
+      </h2>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </section>
+
+    <section class="accordion">
+      <input type="checkbox" name="collapse" id="handle6">
+      <h2 class="handle">
+        <label for="handle6">Yet Another Visible Text</label>
+      </h2>
+      <div class="content">
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </section>
+
   </div>
   <div class="rightcolumn">
     <div class="aboutme">
