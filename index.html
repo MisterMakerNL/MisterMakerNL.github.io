@@ -19,11 +19,60 @@
 
 <div class="row">
   <div class="leftcolumn">
+    <h2>Animated Collapsibles</h2>
+
+    <p>A Collapsible:</p>
+    <button class="collapsible">Open Collapsible</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    
+    <p>Collapsible Set:</p>
+    <button class="collapsible">Open Section 1</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="collapsible">Open Section 2</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="collapsible">Open Section 3</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
     <div class="headpost"><h1>Freelance</h1></div>
     <div class="post">
       <p>Need some extra hands to help with your mechanical engineering projects? Or have a project that you can't do yourself? <br>
     I am available to work from home or on location. My work area is around Tilburg, Eindhoven and 's Hertogenbosch see this  <a href="/img/werkgebied.png" target="_blank">map!</a> <br>
-    </p>
+<br>My qualifications are:</p>
+<ul>
+<li>Mechanical engineering specialised in design and innovation. MBO+HBO WTB</li>
+<li>International Welding Technologist(iwt)</li><br>
+
+<p> I do a lot of CAD work, done for customers and for multiple years as an employee. 
+    I recently became involved in to <a href="https://en.wikipedia.org/wiki/FreeCAD" target="_blank">FreeCAD</a> as this CAD program shows a lot of potential, 
+    and does not have the Vendor lock issues that other CAD software has. It enables me to suit the software to my needs. <br>
+
+    I have worked with the following CAD programs:</p>
+    <ul>
+        <li>FreeCAD</li>
+        <li>Solidworks</li>
+        <li>Fusion360</li>
+        <li>Solid Edge</li>
+        <li>Autocad</li>
+        <li>Inventor</li>
+        <li>Catia V5</li>
+        <li>Pro/e</li>
+    </ul><br>
+    <p> Projects I worked on:
+<ul>
+    <li>Industrial Pumps</li>
+    <li>Scissor lift</li>
+    <li>Office automation</li>
+    <li>Furniture (also self made)</li>
+
+</ul>
+</p>
     </div>
     <div class="headpost"><h1>Design</h1></div>
     <div class="post">
@@ -68,7 +117,22 @@
 <div class="footer">
   <h2>Footer</h2>
 </div>
-
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
 </body>
 </html>
 
