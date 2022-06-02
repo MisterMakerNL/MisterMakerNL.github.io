@@ -9,7 +9,7 @@
 body {
   background: #202020;
 }
-span.spamprotection {display:none;}
+.spamprotection {display:none;}
 hr  {  
     width: 80%;  
     height: 5px;  
