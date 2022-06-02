@@ -32,7 +32,7 @@ hr  {
     text-transform: uppercase;
     letter-spacing: 4px;
     background: linear-gradient(120deg, #008cff 20.69%, #7644ff 50.19%,#ff7300 79.69%);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .header h2 {
@@ -43,7 +43,7 @@ hr  {
     text-transform: uppercase;
     letter-spacing: 4px;
     background: linear-gradient(120deg, #008cff 20.69%, #7644ff 50.19%,#ff7300 79.69%);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 /* Style the top navigation bar */
@@ -99,7 +99,7 @@ hr  {
     text-transform: uppercase;
     letter-spacing: 2px;
     background: linear-gradient(120deg, #008cff 20.69%, #7644ff 50.19%,#ff7300 79.69%);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: -40px 0px;
     padding-top: 40px;
@@ -115,7 +115,6 @@ hr  {
     cursor: pointer;
     width: 100%;
     color: #fff;
-
     display: inline-block;
    }
   
@@ -129,8 +128,7 @@ hr  {
     color: white;
     font-size: 25px;
     font-weight: bold;
-    text-align: center;
-    float: inline-start;
+    float:left;
     margin-left: 5px;
     margin-right: 5px;
   }
