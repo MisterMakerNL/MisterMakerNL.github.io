@@ -7,18 +7,20 @@
     }
 
 body {
-  font-family: Arial;
   background: #202020;
 }
 hr  {  
     width: 80%;  
     height: 5px;  
-    margin-bottom: 7px;  
     margin-right: auto;  
     margin-left: auto;  
-    margin-top: 9px;  
+    margin-top: 15px;  
     background: linear-gradient(120deg, #008cff 20.69%, #7644ff 50.19%,#ff7300 79.69%);
     }  
+
+    a {
+        color: #8ebf42;
+      }
 /* Header/Blog Title */
 .header {
     width: 100%; 
@@ -38,6 +40,8 @@ hr  {
 .header h2 {
     text-align: center;
     color: #1f1f25;
+    font-family: Poppins;
+    font-variant: normal;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
@@ -70,10 +74,10 @@ hr  {
 
 /* Create two unequal columns that floats next to each other */
 /* Left column */
-.leftcolumn {   
+.row {   
   float: left;
-  padding-left: 2%;
-  width: 75%;
+  padding: 2%;
+  width: 100%;
   color: #ffffff;
 }
 
@@ -105,22 +109,24 @@ hr  {
   
   .accordion label,
   .accordion .content{
-   max-width: 100%;
-    margin: 0 auto;
+   max-width: 95%;
+    margin: auto;
    }
   
   
   .accordion .content {
-    background: #fff;
+    background: #202020;
     overflow: hidden;
+    text-align: center;
     height: 0;
-    transition: 0.5s;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: 2s;
+    padding: 0px;
+    margin-bottom: 5px;
   }
   
   .accordion > input[name="collapse"]:checked ~ .content {
-    height: 380px;
-    transition: height 0.5s;
+    height: auto;
+    transition: height 1s;
   }
   
   .accordion label {
@@ -131,7 +137,7 @@ hr  {
   /* For Desktop */
   @media only screen and (min-width: 620px){ 
   .accordion > input[name="collapse"]:checked ~ .content {
-    height: 220px;
+    height: auto;
   }
   
   }
@@ -143,29 +149,49 @@ hr  {
   .accordion > input[name="collapse"]:checked ~ .content {
     border-top: 0;
     transition: 0.3s;
+    background: #202020;
   }
   
   .accordion .handle {
     margin: 0;
-    font-size: 16px;
-    
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #1f1f25;
+    letter-spacing: 1px;
   }
   
   .accordion label {
-    color: #fff;
     cursor: pointer;
-    font-weight: normal;
     padding: 10px;
-    background: #4d4d4d;
-    user-select: none;
+     user-select: none;
+    text-align: center;
+    color: #1f1f25;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(120deg, #008cff 20.69%, #7644ff 50.19%,#ff7300 79.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     
   }
   
   .accordion label:hover,
   .accordion label:focus {
-    background: #252525;
-  }
-  
+    max-width: 95%;
+    cursor: pointer;
+    padding: 10px;
+     user-select: none;
+    text-align: center;
+    color: #1f1f25;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(120deg, #ff7300 20.69%, #7644ff 50.19%,#008cff 79.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  } 
   .accordion .handle label:before {
     content: "▼";
     display: inline-block;
@@ -181,19 +207,27 @@ hr  {
       transform: rotate(180deg);
       transform-origin: center;
       transition: 1s;
-  }
+    }
+    .accordion .handle label:after {
+        content: "▼";
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 1em;
+        line-height: 1.556em;
+        vertical-align: middle;
+        transition: 0.4s;
+        
+      }
+      
+      .accordion > input[name="collapse"]:checked ~ .handle label:after {
+          transform: rotate(180deg);
+          transform-origin: center;
+          transition: 1s;
+        }
+      
   
-  
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 1%;
-  padding-right: 2%;
-  color: #ffffff;
-}
 
-/* Fake image */
+/* image */
 .img {
   background-color: #aaa;
   width:fit-content;
@@ -271,14 +305,12 @@ hr  {
   content: "";
   display: table;
   clear: both;
+  width: 100%; 
 }
 
 /* Footer */
 .footer {
-  padding: 20px;
-  text-align: center;
-  background-color: #202020;
-  margin-top: 20px;
+    width: 100%; 
   color: #ffffff;
 }
 
